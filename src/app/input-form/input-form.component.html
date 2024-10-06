@@ -1,0 +1,64 @@
+<form [formGroup]="userform" (ngSubmit)="register(updateButton.value)">
+    <div class="con">
+        <div>
+            ENTER NAME : <input type="text" #txtname formControlName="fname" placeholder="Enter Name"
+                [ngClass]="{'error-border':userform.controls['fname'].touched && !userform.controls['fname'].valid}">
+            <div [style.color]="'red'" *ngIf="userform.controls['fname'].touched && !userform.controls['fname'].valid"> Please Enter Name</div>
+        </div>
+        <div>
+            ENTER AGE : <input type="text" #txtage formControlName="age" placeholder="Enter Age">
+        </div>
+        <div>
+            ENTER MOBILE NUMBER : <input type="tel" #txtnum formControlName="mnum" placeholder="Enter Mobile Number"
+                [ngClass]="{'error-border':userform.controls['mnum'].touched && !userform.controls['mnum'].valid}">
+        
+            <span [style.color]="'red'" *ngIf="userform.controls['mnum'].touched && userform.controls['mnum'].errors?.['required']">Please Enter
+                mobile Number</span>
+        
+            <span [style.color]="'red'" *ngIf="userform.controls['mnum'].touched && userform.controls['mnum'].errors?.['minlength']">Number cannot be
+                less than 10 digits</span>
+        
+            <span [style.color]="'red'" *ngIf="userform.controls['mnum'].touched && userform.controls['mnum'].errors?.['maxlength']">Number cannot be
+                more than 10 digits</span>
+        </div>
+        
+        <div class = "btns">
+            <span>
+                <button type="submit" [disabled]="!userform.valid || !isSubmitButtonActive">SUBMIT</button>
+            </span>
+            <span>
+                <button type="submit" #updateButton [disabled]="!userform.valid || !isEditButtonActive"
+                    [value]="updateId">UPDATE</button>
+            </span>
+
+        </div>
+
+        
+
+    </div>
+
+    <!-- <div *ngIf="userform.controls['fname'].valid && userform.controls['mnum'].valid">
+        <button type="submit" [disabled]="false">SUBMIT</button>
+    </div> 
+     <div *ngIf="!userform.controls['fname'].valid || !userform.controls['mnum'].valid">
+        <button type="submit" [disabled]="true">SUBMIT</button>
+    </div> -->
+    
+</form>
+
+<div class="heading">
+    <h1>YOUR DETAILS ARE </h1>
+</div>
+
+
+<table border="1" id="mytable">
+    <TBody>
+        <tr id="myrow">
+            <td>NAME</td>
+            <td>AGE</td>
+            <td>MOBILE NUMBER</td>
+        </tr>
+    </TBody>
+</table>
+
+`

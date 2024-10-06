@@ -1,0 +1,100 @@
+    .con {
+        max-width: 400px;
+         margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 400;
+        background-color: antiquewhite;
+    }
+        input[type=text]:focus {
+            background-color: lightblue;
+        }
+        input[type=tel]:focus {
+            background-color: lightblue;
+        }
+
+    input{
+        margin-top: 6px;
+        padding: 5px;
+    }
+
+.error-border {
+    border-color: #ff0000;
+    
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+    
+}
+
+button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+    
+}
+
+table {
+    border-collapse: collapse;
+    width: 60%;
+    margin: 20px;
+    margin-left: 270px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table,
+th,
+td {
+    border: 2px solid black;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 12px;
+    color: black;
+    background-color:aquamarine
+    
+}
+
+th {
+    background-color: whitesmoke;
+    
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.heading {
+    text-align: center;
+}
+
+h1 {
+    display: inline-block;
+    background-color: violet;
+    padding: 5px;
+}
+
+.btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom{
+    padding: 10px 20px;
+        margin-top: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+}
